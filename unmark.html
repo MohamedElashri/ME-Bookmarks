@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/third_party/jquery.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/unmark/base.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/unmark/extension.js" charset="utf-8"></script>
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic|Montserrat:400" rel="stylesheet" type="text/css">
+    <link href="css/unmark.css" rel="stylesheet" type="text/css">
+    <link href="css/extension.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/unmark/icons.js" charset="utf-8"></script>
+    <noscript><link href="css/icons.fallback.css" rel="stylesheet"></noscript>
+
+</head>
+<body class="unmark-solo">
+
+    <div class="mark-added" id="options">
+        <div class="mark-added-block" id="message" style="display:none;">
+            This link has been added to your stream.
+            <i class="icon-check"></i>
+        </div>
+
+        <div class="mark-added-info">
+            <h1 id="text-title"></h1>
+            <span id="text-url"></span>
+        </div>
+
+        <div class="mark-added-label mark-added-settings">
+            <span id="label-chosen"></span>
+            <a href="#" id="label-chosen-name" data-method="toggleLabels">Unlabeled</a>
+            <section>
+                <ul class="label-choices"></ul>
+            </section>
+        </div>
+
+        <div class="mark-added-note mark-added-settings">
+            <a href="#" data-method="showNotes" id="notes-title">Add A Note</a>
+            <section class="hideoutline" contenteditable="true" id="notes"></section>
+        </div>
+
+        <div class="mark-added-actions center">
+            <button id="submit" class="danger">Add Mark</button>
+        </div>
+
+        <div id="edit-options">
+            <button class="delete" data-method="archiveMark">Archive</button>
+            <button class="delete" data-method="deleteMark">Delete</button>
+        </div>
+    </div>
+
+
+    <div class="mark-added" id="login">
+        <div class="mark-added-info">
+            <h1>Please log into your account.</h1>
+        </div>
+        <div class="mark-added-actions">
+            <button class="danger" data-method="login">Login</button>
+        </div>
+    </div>
+
+    <div class="mark-added" id="error">
+        <div class="mark-added-info">
+            <h1>An unexpected error has occured.</h1>
+        </div>
+        <div class="mark-added-actions">
+            <button class="danger" data-method="closePopup">Close</button>
+        </div>
+    </div>
+
+    <div class="mark-added" id="invalid">
+        <div class="mark-added-info">
+            <h1>This page has an invalid protocol. Only pages using "http(s)" can be saved.</h1>
+        </div>
+        <div class="mark-added-actions">
+            <button class="danger" data-method="closePopup">Close</button>
+        </div>
+    </div>
+
+    <div class="mark-added" id="archived">
+        <div class="mark-added-block">
+            This link has been archived.
+            <i class="icon-check"></i>
+        </div>
+        <div class="mark-added-actions button-margins-small">
+            <button class="danger" data-method="restoreMark">Restore It</button>
+        </div>
+    </div>
+
+     <div class="mark-added" id="deleted">
+        <div class="mark-added-block">
+            This mark has been deleted.
+            <i class="icon-check"></i>
+        </div>
+        <div class="mark-added-actions button-margins-small">
+            <button class="danger" data-method="closePopup">Close</button>
+        </div>
+    </div>
+
+</body>
+</html>
